@@ -1,12 +1,40 @@
-# TryHackMe — Writeups
+# TryHackMe — Writeups & Fiches techniques
 
-Writeups personnels de rooms TryHackMe, dans le cadre du parcours **Jr Penetration Tester**.
+Notes personnelles de cybersécurité offensive, dans le cadre du parcours **Jr Penetration Tester** (TryHackMe).
 
-Chaque writeup suit la même structure : reconnaissance, accès initial, élévation de privilèges, et une section "ce que j'ai appris" avec les pièges rencontrés. Les flags sont volontairement masqués (`THM{REDACTED}`), conformément aux bonnes pratiques TryHackMe.
+Deux parties : des **writeups** de rooms (démarche complète) et des **fiches techniques** réutilisables (une technique = un principe, les conditions d'exploitation, le diagnostic, la remédiation). Les flags sont volontairement masqués (`THM{REDACTED}`), conformément aux bonnes pratiques TryHackMe.
 
 ## Writeups
 
 - [jump](writeups/jump.md) — chaîne de privilege escalation Linux à 5 paliers (recon -> dev -> monitor -> ops -> root) : pipeline FTP + cron, scripts group-writable, PATH hijacking, abus de sudo, GTFOBins.
+
+## Fiches techniques
+
+### Transverse
+- [Méthodologie pentest](techniques/Methodologie-Pentest.md)
+- [Checklist d'énumération (Linux PrivEsc)](techniques/Enumeration-Checklist.md)
+
+### Linux — élévation de privilèges
+- [PATH hijacking](techniques/linux/PATH-Hijacking.md)
+- [Binaires SUID](techniques/linux/SUID-Binaries.md)
+- [Capabilities Linux](techniques/linux/Linux-Capabilities.md)
+- [Tâches cron](techniques/linux/Cron-Jobs.md)
+- [Exploitation de sudo](techniques/linux/Sudo-Exploitation.md)
+- [/etc/passwd inscriptible](techniques/linux/Writable-etc-passwd.md)
+- [Pipeline de traitement de fichiers (dépôt -> exécution)](techniques/linux/Service-Exploitation-Cron.md)
+
+### Windows — élévation de privilèges
+- [Théorie — Windows PrivEsc](techniques/windows/00-Theorie-Windows-PrivEsc.md)
+- [Méthodologie — Windows PrivEsc (diagnostic par vecteur)](techniques/windows/00-Methodologie-Windows-PrivEsc.md)
+- [Permissions faibles sur l'exécutable d'un service](techniques/windows/Service-Insecure-Permissions.md)
+- [Chemin de service non entre guillemets](techniques/windows/Unquoted-Service-Path.md)
+- [DACL de service faible](techniques/windows/Weak-Service-DACL.md)
+- [SeImpersonate (Potato)](techniques/windows/SeImpersonate.md)
+- [SeBackupPrivilege](techniques/windows/SeBackupPrivilege.md)
+- [SeTakeOwnership](techniques/windows/SeTakeOwnership.md)
+
+### Web
+- [Command injection](techniques/web/Command-Injection.md)
 
 ## Approche
 
