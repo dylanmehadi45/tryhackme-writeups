@@ -6,7 +6,11 @@ Deux parties : des **writeups** de rooms (démarche complète) et des **fiches t
 
 ## Writeups
 
+### Linux
 - [jump](writeups/jump.md) — chaîne de privilege escalation Linux à 5 paliers (recon -> dev -> monitor -> ops -> root) : pipeline FTP + cron, scripts group-writable, PATH hijacking, abus de sudo, GTFOBins.
+
+### Windows
+- [Windows Jump](writeups/windows-jump.md) — chaîne de privilege escalation Windows à 4 paliers (thmuser -> notadmin -> svcadmin -> SYSTEM) : creds SMB dans un partage, autologon en clair (Winlogon), binaire de service écrasable, script de tâche legacy inscriptible (C:\Windows\Tasks) lancé en SYSTEM.
 
 ## Fiches techniques
 
